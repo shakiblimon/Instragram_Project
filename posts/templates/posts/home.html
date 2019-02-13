@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django Indtragram Project </title>
+</head>
+<body>
+{% csrf_token %}
+<h1> Django Instragram Project</h1>
+<ul>
+    {% for post in object_list %}
+    <h2>
+        {{ post.title }}
+    </h2>
+    <img src="{{ post.upload_image.url }}" alt ="{{ post.title }}">
+</ul>
+{% endfor %}
+</body>
+</html>

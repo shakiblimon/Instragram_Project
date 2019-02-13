@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
+    <title>Create Post</title>
+</head>
+<body>
+
+<h1> Create Your Post</h1>
+<!-- New Form Design-->
+<form class="md-form" method="post" enctype="multipart/form-data">
+    <div class="file-field">
+        <a class="btn-floating purple-gradient mt-0 float-left">
+            <i class="fas fa-cloud-upload-alt" aria-hidden="true"></i>
+        </a>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Create Post</button>
+    </div>
+</form>
+
+
+<!-- NEw Form Desgin End-->
+
+
+</body>
+</html>
